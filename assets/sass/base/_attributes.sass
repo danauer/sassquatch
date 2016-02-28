@@ -1,0 +1,103 @@
+// ||||||||||||||||||||||||||||||||||||||||
+// VENDOR PREFIXES
+// ||||||||||||||||||||||||||||||||||||||||
+
+$webkit : -moz-
+$blink : $webkit
+$mozilla : -moz-
+$microsoft : -ms-
+
+// ||||||||||||||||||||||||||||||||||||||||
+// DIRECTION
+// ||||||||||||||||||||||||||||||||||||||||
+
+$horizontal: (left, center, right)
+$vertical: (top, center, bottom)
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// BOX MODEL
+// ||||||||||||||||||||||||||||||||||||||||
+
+// Sides defined for 
+$sides: (all, top, right, bottom, left)
+$sizes: (small, medium, large)
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// COLORS
+// ||||||||||||||||||||||||||||||||||||||||
+
+// Collecting all colors in list of lists to use in color function
+$colors: ($color_set-black, $color_set-gray_darker, $color_set-gray_dark, $color_set-gray, $color_set-gray_light, $color_set-gray_lighter, $color_set-white)
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// BACKGROUND
+// ||||||||||||||||||||||||||||||||||||||||
+
+$background-attachment: (scroll, fixed, local,inherit)
+$background-position: (horizontal:$horizontal,vertical:$vertical)
+$background-repeat: (repeat-x,repeat-y,repeat,space,round,no-repeat,inherit)
+$background-size: (cover, contain)
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// FLEX
+// ||||||||||||||||||||||||||||||||||||||||
+
+$align-items: (flex-start, flex-end, center, baseline, stretch)
+$flex-basis: (auto, fill, max-content, min-content, fit-content, content)
+$flex-direction: (row, row-reverse, column, column-reverse)
+$justify-content: (flex-start, flex-end, center, space-between, space-around)
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// POSITION
+// ||||||||||||||||||||||||||||||||||||||||
+
+$alignment: (left, right, center)
+$clear: (none,left,right,both,inline-start,inline-end,inherit)
+$display_types: (inline, block, inline-block, contents, list-item, inline-list-item, table, inline-table, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row, table-row-group, table-caption, flex, inline-flex, grid, inline-grid, ruby, ruby-base, ruby-text, ruby-base-container, ruby-text-container, run-in, none)
+$overflow: (visible,hidden,scroll,auto)
+$page-break-after: (auto,always,avoid,left,right,recto,verso)
+$page-break-before: $page-break-after
+$positions: (static, relative, absolute, fixed, sticky)
+$vertical-align: (baseline,sub,super,text-top,text-bottom,middle,top,bottom)
+$visibility: (visible,hidden,collapse)
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// TYPOGRAPHY
+// ||||||||||||||||||||||||||||||||||||||||
+
+$cursor: (auto,default,none,context-menu,help,pointer,progress,wait,cell,crosshair,text,vertical-text,alias,copy,move,no-drop,not-allowed,all-scroll,col-resize,row-resize,n-resize,e-resize,s-resize,w-resize,ne-resize,nw-resize,se-resize,sw-resize,ew-resize,ns-resize,nesw-resize,nwse-resize,zoom-in,zoom-out,grab,grabbing)
+$font-weight: (normal,bold,lighter,bolder,100,200,300,400,500,600,700,800,900)
+$list-style-position: (inside,outside)
+$list-style-type: (disc, circle,square,decimal,georgian,cjk-ideographic,kannada,none)
+$text-transform: (capitalize,uppercase,lowercase,none,full-width)
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// APPEND BATCH ATTRIBUTES
+// ||||||||||||||||||||||||||||||||||||||||
+
+$global_values: (inherit, initial, unset)
+
+$align-items: join($align-items, $global_values)
+$background-size: join($background-size, $global_values)
+$cursor: join($cursor, $global_values)
+$display_types: join($display_types, $global_values)
+$flex-basis: join($flex-basis, $global_values)
+$flex-direction: join($flex-direction, $global_values)
+$font-weight: join($font-weight, $global_values)
+$list-style-position: join($list-style-position, $global_values)
+$list-style-type: join($list-style-type, $global_values)
+$justify-content: join($justify-content, $global_values)
+$overflow: join($overflow, $global_values)
+$page-break-after: join($page-break-after, $global_values)
+$page-break-before: join($page-break-before, $global_values)
+$positions: join($positions, $global_values)
+$vertical-align: join($vertical-align, $global_values)
+$visibility: join($visibility, $global_values)
+$text-transform: join($text-transform, $global_values)

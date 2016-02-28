@@ -1,0 +1,56 @@
+body
+  font-size: 62.5%
+  font-size: 1rem
+  line-height: $line-height
+  
+// ||||||||||||||||||||||||||||||||||||||||
+// BODY COPY
+// ||||||||||||||||||||||||||||||||||||||||
+
++make_attribute(font-weight,$font-weight)
+
+  
+// ||||||||||||||||||||||||||||||||||||||||
+// HEADERS
+// ||||||||||||||||||||||||||||||||||||||||
+
+$type_size_limit: 7
+
+@for $hierarchy from 1 to $type_size_limit
+  $header_step: $type_size_limit - $hierarchy
+  $header_nth: nth($type_hierarchy, $header_step + 2)
+  $header_nth: $header_nth/10 + 1
+  h#{$hierarchy}
+    font-size:  #{$header_nth}rem
+    
+@for $font-size from 1 to $type_size_limit + 2
+  $type_step: $type_size_limit - $font-size
+  $type_nth: nth($type_hierarchy, $font-size)
+  $type_nth: $type_nth/10 + 1
+  .type-#{$font-size}
+    font-size: #{$type_nth}rem
+  
+h1, h2, h3, h4, h5, h6
+  line-height: $line-height
+  
+  
+// ||||||||||||||||||||||||||||||||||||||||
+// BODY COPY
+// ||||||||||||||||||||||||||||||||||||||||
+
++make_attribute(cursor, $cursor)
++make_attribute(text-align, $alignment)
++make_attribute(list-style-position, $list-style-position)
++make_attribute(list-style-type, $list-style-type)
++make_attribute(text-transform, $text-transform)
+
++letter_spacing(tight)
++letter_spacing(loose)
+  
+// ||||||||||||||||||||||||||||||||||||||||
+// LIST STYLES
+// ||||||||||||||||||||||||||||||||||||||||
+
+ul, ol, dl
+  font-size: 1rem
+  line-height: $line-height

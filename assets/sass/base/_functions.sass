@@ -1,0 +1,30 @@
+// ||||||||||||||||||||||||||||||||||||||||
+// SEQUENCES
+// ||||||||||||||||||||||||||||||||||||||||  
+
+@function sequence($mode:arithmetic,$constant:1,$limit:100)
+  // Establish the base of the list
+  // This comprises of the first two nodes within the array
+  $base: (0,1)
+  @if $constant == even or $constant == odd
+    $constant: 2
+  @if $constant == even
+    $base: (0,0)
+  
+  // Fibonacci sequence formula
+  @if $mode == fibonacci
+    @for $fibonacci_nth from 1 through $limit
+      $new_numeral: nth($base, length($base)) + nth($base, length($base) - 1)
+      $base: append($base, $new_numeral)
+      
+  // General process for both arithmetic and geometric sequences
+  @if $mode == arithmetic or $mode == geometric
+    @for $nth from 1 through $limit
+      $new_numeral: 0
+      @if $mode == arithmetic
+        $new_numeral: $constant + nth($base,length($base))
+      @if $mode == geometric
+        $new_numeral: $constant * nth($base,length($base))
+      $base: append($base, $new_numeral)
+  
+  @return $base

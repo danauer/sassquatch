@@ -1,0 +1,9 @@
+@each $size in $sizes
+  +box_style(margin,$size)
+  +box_style(padding,$size)
+  +box_style(border,$size)
+  
++make_attribute(align-items, $align-items)
++make_attribute(flex-basis, $flex-basis)
++make_attribute(flex-direction, $flex-direction)
++make_attribute(justify-content, $justify-content)

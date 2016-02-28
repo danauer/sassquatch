@@ -1,0 +1,94 @@
+// ||||||||||||||||||||||||||||||||||||||||
+// FUNCTIONS
+// ||||||||||||||||||||||||||||||||||||||||
+  
+$arithmetic: sequence(arithmetic,1)
+$even: sequence(arithmetic,even)
+$odd: sequence(arithmetic,odd)
+$geometric: sequence(geometric,1.5)
+$fibonacci: sequence(fibonacci)
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// GENERIC COLORS
+// ||||||||||||||||||||||||||||||||||||||||
+
+// Color variables
+$black: rgb(0,0,0)
+$gray_darker: rgb(40,40,40)
+$gray_dark: rgb(90,90,90)
+$gray: rgb(125,125,125)
+$gray_light: rgb(160,160,160)
+$gray_lighter: rgb(210,210,210)
+$white: rgb(255,255,255)
+
+$red: rgb(255,77,29)
+$orange: rgb(255,11,13)
+$yellow-orange: rgb(255,147,18)
+$yellow: rgb(255,194,0)
+$yellow-green: rgb(157,91,16)
+$green: rgb(60,178,36)
+$blue-green: rgb(18,160,119)
+$blue: rgb(43,144,226)
+$blue-violet: rgb(83,83,234)
+$violet: rgb(145,20,226)
+$magenta: rgb(206,15,128)
+
+// Establishing colors in lists for use in color function
+$color_set-black: ('black', $black)
+$color_set-gray_darker: ('gray_darker', $gray_darker)
+$color_set-gray_dark: ('gray_dark', $gray_dark)
+$color_set-gray: ('gray', $gray)
+$color_set-gray_light: ('gray_light', $gray_light)
+$color_set-gray_lighter: ('gray_lighter', $gray_lighter)
+$color_set-white: ('white', $white)
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// BOX MODEL
+// ||||||||||||||||||||||||||||||||||||||||
+
+$small_border: 1px
+$medium_border: 2px
+$large_border: 3px
+
+$small_space: 0.5rem
+$medium_space: 1rem
+$large_space: 1.5rem
+
+$radius_hierarchy: $arithmetic
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// TYPOGRAPHY
+// ||||||||||||||||||||||||||||||||||||||||
+
+$type_hierarchy: $arithmetic
+
+$line-height: 1.25em
+
+$tight_letter_spacing: -1
+$loose_letter_spacing: 2
+
+// ||||||||||||||||||||||||||||||||||||||||
+// MEDIA QUERIES
+// ||||||||||||||||||||||||||||||||||||||||
+
+$desktop: 1280px
+$tablet: 1024px
+$mobile: 640px
+
+// ||||||||||||||||||||||||||||||||||||||||
+// ATTRIBUTES
+// ||||||||||||||||||||||||||||||||||||||||
+
+@import 'attributes'
+  
+
+// ||||||||||||||||||||||||||||||||||||||||
+// THEME OVERRIDES
+// ||||||||||||||||||||||||||||||||||||||||
+
+@import 'theme/_variables'
+
+$all_colors: join($colors, $theme_colors)
