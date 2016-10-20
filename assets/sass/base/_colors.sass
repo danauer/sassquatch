@@ -7,7 +7,7 @@
   .#{$color}-border_color
     border-color: $colorvalue
     
-@for $color_nth from 1 through length($all_colors)
-  $nth_map: nth($all_colors,$color_nth)
-  +make_gradient(nth($nth_map,1),nth($nth_map,2),horizontal)
-  +make_gradient(nth($nth_map,1),nth($nth_map,2),vertical)
+// @for $color_nth from 1 through length($all_colors)
+//   $nth_map: nth($all_colors,$color_nth)
+//   +make_gradient(nth($nth_map,1),nth($nth_map,2),horizontal)
+//   +make_gradient(nth($nth_map,1),nth($nth_map,2),vertical)

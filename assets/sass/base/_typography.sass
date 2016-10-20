@@ -4,6 +4,17 @@ body
   line-height: $line-height
   
 // ||||||||||||||||||||||||||||||||||||||||
+// FONT FAMILY
+// ||||||||||||||||||||||||||||||||||||||||
+
+@if $type_type == 'sans-serif'
+  *
+    font-family: 'Helvetica Neue', 'Arial', sans-serif
+@elseif $type_type == 'serif'
+  *
+    font-family: 'Georgia', 'Times New Roman', serif
+  
+// ||||||||||||||||||||||||||||||||||||||||
 // BODY COPY
 // ||||||||||||||||||||||||||||||||||||||||
 

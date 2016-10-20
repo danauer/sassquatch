@@ -32,13 +32,6 @@
   background-image: -ms-linear-gradient(#{$start_position}, #{$start} 0%, #{$stop} 100%)
   background-image: linear-gradient(to #{$stop_position}, #{$start} 0%, #{$stop} 100%)
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$stop}', GradientType=0 )
-  
-=make_gradient($start,$start_value,$direction)
-  @for $color_nth from 1 to length($all_colors)
-    @if $color_nth != $start
-      $stop_color: nth($all_colors,$color_nth)
-      .#{$start}-to-#{nth($stop_color,1)}-#{$direction}
-        +linear-gradient($start_value,#{nth($stop_color,2)},#{$direction})
       
       
 // ||||||||||||||||||||||||||||||||||||||||
